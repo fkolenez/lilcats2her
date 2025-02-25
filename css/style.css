@@ -1,0 +1,48 @@
+.html, body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(83, 28, 134);
+}
+
+#catImage{
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+.font {
+  font-family: "Meow Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #fff;
+}
+
+.text{
+  font-family: "Meow Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #fff;
+}
+
+.fodase {
+  justify-content: center;
+  display: flex;
+}
+
+.mt-2{
+  margin-top: 20px;
+}
+
+.btn{
+  background-color: #ffffff00;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+  color: #fff;
+  transition: background-color 1s, color 1s;
+}
+
+.btn:hover{
+  color: #000;
+  background-color: #ffffff;
+}

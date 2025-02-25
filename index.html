@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATINHOS PARA A LUA</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="fodase">
+      <h1 class="font">Gatinhos para a Lua</h1>
+    </div>
+
+    <div class="fodase">
+        <button id="changeCat" class="btn ">Clique para mudar o gatinho 😺</button>
+    </div>
+
+    <div class="fodase mt-2">
+          <img
+            id="catImage"
+            src="https://cataas.com/cat/says/s2?type=square"
+            width="300"
+          />
+    </div>
+
+    <script>
+      i = 0;
+
+      document.getElementById("changeCat").addEventListener("click", () => {
+        if (i > 3) {
+          console.log(i);
+          document.querySelector("#catImage").src = "assets/espelho.webp";
+          return;
+        }
+
+        fetch("https://cataas.com/cat/says/s2?type=square")
+          .then((response) => response.blob())
+          .then((imageBlob) => {
+            const imageObjectURL = URL.createObjectURL(imageBlob);
+            document.querySelector("#catImage").src = imageObjectURL;
+          })
+          .catch((error) => console.error("Error fetching cat image:", error));
+
+          i++;
+      });
+    </script>
+  </body>
+</html>
